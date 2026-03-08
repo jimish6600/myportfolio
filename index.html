@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Jimish Patel | Software Engineer</title>
+  <meta name="description" content="Jimish Patel – SDE-1 at Shipturtle. Backend & Full-Stack Engineer. LeetCode Knight (1927). Portfolio."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div id="scroll-bar"></div>
+
+<!-- Custom cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Ambient blobs -->
+<div class="blob" style="width:600px;height:600px;background:rgba(108,99,255,.1);top:5%;left:-15%;animation-delay:0s"></div>
+<div class="blob" style="width:480px;height:480px;background:rgba(0,212,255,.07);top:38%;right:-8%;animation-delay:3.5s"></div>
+<div class="blob" style="width:350px;height:350px;background:rgba(255,101,132,.06);bottom:8%;left:28%;animation-delay:6s"></div>
+
+<!-- Three.js canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ════════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-logo">JP</div>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#cp">Coding</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+
+      <div class="hero-badge">
+        <span class="live-dot"></span>
+        Open to Opportunities
+      </div>
+
+      <h1 class="hero-name">
+        Jimish<br>
+        <span class="grad">Patel.</span>
+      </h1>
+
+      <div class="hero-type-wrap">
+        <strong>›</strong>
+        <span id="type-role">Backend Developer</span>
+        <span class="cursor-blink"></span>
+      </div>
+
+      <p class="hero-desc">
+        SDE-1 at Shipturtle · B.Tech CSE @ Ahmedabad University.
+        Passionate about building scalable backends, shipping clean products,
+        and crushing competitive programming problems.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          View Projects
+        </a>
+        <a href="mailto:jimishpately50@gmail.com" class="btn-outline">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Hire Me
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-val" id="hero-lc">1927</span><span class="stat-label">LeetCode Rating</span></div>
+        <div class="stat"><span class="stat-val" id="hero-cf">1648</span><span class="stat-label">Codeforces Rating</span></div>
+        <div class="stat"><span class="stat-val">Knight</span><span class="stat-label">LC Rank</span></div>
+        <div class="stat"><span class="stat-val">SDE-1</span><span class="stat-label">Current Role</span></div>
+      </div>
+
+    </div>
+
+    <!-- Hero 3D orb (rendered by Three.js in bg.js) -->
+    <div class="hero-canvas-wrap">
+      <!-- The bg canvas handles the global 3D, this is just a visual placeholder -->
+      <div style="width:240px;height:240px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(108,99,255,.25),rgba(0,212,255,.1) 50%,transparent 70%);animation:orbGlow 3s ease-in-out infinite;display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:4rem;animation:blobFloat 4s ease-in-out infinite">⚡</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════════════ -->
+<section id="experience" style="max-width:900px;margin:0 auto;">
+  <span class="section-tag">Work History</span>
+  <h2 class="section-title">Experience</h2>
+
+  <div class="exp-timeline">
+
+    <div class="glass-card exp-card reveal" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">SDE 1</div>
+          <div class="exp-company">Shipturtle · Ahmedabad, Gujarat</div>
+        </div>
+        <div class="exp-meta">
+          <span class="exp-badge current">● Current</span>
+          <span class="exp-badge">Dec 2025 – Present</span>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Conducted user tests on websites and apps to identify usability issues and provide actionable feedback.</li>
+        <li>Applied UX design expertise to suggest improvements for better usability and user enjoyment.</li>
+        <li>Consistently maintained an average user satisfaction rating of <strong>4 stars</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="glass-card exp-card reveal" style="transition-delay:.15s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">Backend Developer Intern</div>
+          <div class="exp-company">Rablo.in · Lucknow, Uttar Pradesh</div>
+        </div>
+        <div class="exp-meta">
+          <span class="exp-badge">Remote</span>
+          <span class="exp-badge">Jul 2024 – Oct 2024</span>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Built backend features using Node.js, Express.js, and MongoDB; solved complex real-world problems.</li>
+        <li>Collaborated on team projects, built scalable REST APIs, deepened SDLC understanding.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════════ -->
+<section id="projects">
+  <span class="section-tag">What I've Built</span>
+  <h2 class="section-title">Featured <span>Projects</span></h2>
+
+  <div class="projects-grid">
+
+    <div class="glass-card reveal" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="proj-glow" style="background:#6c63ff"></div>
+      <div class="proj-icon" style="background:rgba(108,99,255,.18)">🛒</div>
+      <div class="proj-title">Microservices E-Commerce</div>
+      <div class="proj-subtitle">Scalable Backend Architecture</div>
+      <p class="proj-desc">
+        Production-grade e-commerce backend built with microservices architecture.
+        RabbitMQ handles async messaging between user, product, and shopping services.
+        Docker for containerisation, Nginx as reverse proxy.
+      </p>
+      <div class="tech-stack">
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">RabbitMQ</span>
+        <span class="tech-tag">Docker</span>
+        <span class="tech-tag">Nginx</span>
+        <span class="tech-tag">Express.js</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/jimish6600" target="_blank" class="proj-link">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="glass-card reveal" style="transition-delay:.2s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="proj-glow" style="background:#00d4ff"></div>
+      <div class="proj-icon" style="background:rgba(0,212,255,.15)">🧠</div>
+      <div class="proj-title">QuizGenius</div>
+      <div class="proj-subtitle">AI-Powered Quiz Platform</div>
+      <p class="proj-desc">
+        Full-stack app that auto-generates quizzes from uploaded PDFs using AI, with
+        instant feedback, JWT authentication, Redis caching for performance boost,
+        and multiple attempt tracking via a responsive Tailwind UI.
+      </p>
+      <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Redis</span>
+        <span class="tech-tag">JWT</span>
+        <span class="tech-tag">Tailwind CSS</span>
+        <span class="tech-tag">Express.js</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/jimish6600" target="_blank" class="proj-link">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="proj-link live">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     COMPETITIVE PROGRAMMING
+════════════════════════════════════════════════════ -->
+<section id="cp">
+  <span class="section-tag">Problem Solving</span>
+  <h2 class="section-title">Competitive <span>Coding</span></h2>
+
+  <div class="cp-grid">
+
+    <!-- LeetCode -->
+    <div class="glass-card reveal" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="cp-platform-header">
+        <div class="cp-logo-wrap" style="background:rgba(255,161,22,.15)">⚡</div>
+        <div>
+          <div class="cp-platform-name">LeetCode</div>
+          <a href="https://leetcode.com/u/jimish6600/" target="_blank" class="cp-platform-url">@jimish6600</a>
+        </div>
+        <div style="margin-left:auto">
+          <span class="cp-rank-badge" style="color:#fbbf24;border-color:#fbbf2440;background:#fbbf2412">⚔️ Knight</span>
+        </div>
+      </div>
+      <div id="lc-stats">
+        <!-- Populated by render.js -->
+        <div class="skeleton" style="width:100%;height:160px;border-radius:12px"></div>
+      </div>
+    </div>
+
+    <!-- Codeforces -->
+    <div class="glass-card reveal" style="transition-delay:.15s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="cp-platform-header">
+        <div class="cp-logo-wrap" style="background:rgba(108,99,255,.15)">🔷</div>
+        <div>
+          <div class="cp-platform-name">Codeforces</div>
+          <a href="https://codeforces.com/profile/Jimishp6600" target="_blank" class="cp-platform-url">@Jimishp6600</a>
+        </div>
+      </div>
+      <div id="cf-stats">
+        <div class="skeleton" style="width:100%;height:160px;border-radius:12px"></div>
+      </div>
+    </div>
+
+    <!-- CodeChef -->
+    <div class="glass-card reveal" style="transition-delay:.3s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="cp-platform-header">
+        <div class="cp-logo-wrap" style="background:rgba(101,67,33,.25)">🍴</div>
+        <div>
+          <div class="cp-platform-name">CodeChef</div>
+          <a href="https://www.codechef.com/users/jimish6600" target="_blank" class="cp-platform-url">@jimish6600</a>
+        </div>
+        <div style="margin-left:auto">
+          <span class="cp-rank-badge" style="color:#fb923c;border-color:#fb923c40;background:#fb923c12">★★★ 3 Star</span>
+        </div>
+      </div>
+      <div id="cc-stats">
+        <div class="skeleton" style="width:100%;height:120px;border-radius:12px"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════════ -->
+<section id="skills">
+  <span class="section-tag">Tech Arsenal</span>
+  <h2 class="section-title">Technical <span>Skills</span></h2>
+
+  <div class="skills-grid">
+
+    <div class="glass-card reveal" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-chips">
+        <span class="chip"><span class="chip-dot" style="background:#f7df1e"></span>JavaScript</span>
+        <span class="chip"><span class="chip-dot" style="background:#00599c"></span>C++</span>
+        <span class="chip"><span class="chip-dot" style="background:#3572a5"></span>Python</span>
+        <span class="chip"><span class="chip-dot" style="background:#e34c26"></span>HTML</span>
+        <span class="chip"><span class="chip-dot" style="background:#264de4"></span>CSS</span>
+        <span class="chip"><span class="chip-dot" style="background:#336791"></span>SQL</span>
+      </div>
+    </div>
+
+    <div class="glass-card reveal" style="transition-delay:.1s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="skill-group-title">Frameworks</div>
+      <div class="skill-chips">
+        <span class="chip"><span class="chip-dot" style="background:#61dafb"></span>React.js</span>
+        <span class="chip"><span class="chip-dot" style="background:#888"></span>Next.js</span>
+        <span class="chip"><span class="chip-dot" style="background:#68a063"></span>Node.js</span>
+        <span class="chip"><span class="chip-dot" style="background:#aaa"></span>Express.js</span>
+        <span class="chip"><span class="chip-dot" style="background:#38bdf8"></span>Tailwind CSS</span>
+        <span class="chip"><span class="chip-dot" style="background:#7952b3"></span>Bootstrap</span>
+      </div>
+    </div>
+
+    <div class="glass-card reveal" style="transition-delay:.2s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="skill-group-title">Tools & Databases</div>
+      <div class="skill-chips">
+        <span class="chip"><span class="chip-dot" style="background:#4db33d"></span>MongoDB</span>
+        <span class="chip"><span class="chip-dot" style="background:#4479a1"></span>MySQL</span>
+        <span class="chip"><span class="chip-dot" style="background:#dc382d"></span>Redis</span>
+        <span class="chip"><span class="chip-dot" style="background:#f05032"></span>Git</span>
+        <span class="chip"><span class="chip-dot" style="background:#2496ed"></span>Docker</span>
+        <span class="chip"><span class="chip-dot" style="background:#ff6600"></span>RabbitMQ</span>
+        <span class="chip"><span class="chip-dot" style="background:#009900"></span>Nginx</span>
+        <span class="chip"><span class="chip-dot" style="background:#c6538c"></span>SCSS</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     GITHUB ACTIVITY
+════════════════════════════════════════════════════ -->
+<section id="github">
+  <span class="section-tag">Open Source</span>
+  <h2 class="section-title">GitHub <span>Activity</span></h2>
+
+  <div class="gh-header reveal">
+    <div id="gh-stats" style="display:flex;gap:2rem">
+      <div class="skeleton" style="width:80px;height:52px;border-radius:8px"></div>
+      <div class="skeleton" style="width:80px;height:52px;border-radius:8px"></div>
+      <div class="skeleton" style="width:80px;height:52px;border-radius:8px"></div>
+    </div>
+    <a href="https://github.com/jimish6600" target="_blank" class="btn-outline" style="font-size:.82rem;padding:.6rem 1.2rem">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      View GitHub
+    </a>
+  </div>
+
+  <div class="glass-card heatmap-card reveal" style="transition-delay:.1s">
+    <div class="heatmap-label">Contribution activity · last 12 months</div>
+    <div id="heatmap-container">
+      <div class="skeleton" style="width:100%;height:88px;border-radius:8px"></div>
+    </div>
+    <div style="display:flex;gap:1rem;align-items:center;margin-top:.85rem;font-size:.72rem;color:var(--muted2)">
+      <span>Less</span>
+      <span style="display:flex;gap:3px">
+        <span style="width:11px;height:11px;border-radius:2px;background:rgba(255,255,255,.05)"></span>
+        <span style="width:11px;height:11px;border-radius:2px;background:rgba(108,99,255,.25)"></span>
+        <span style="width:11px;height:11px;border-radius:2px;background:rgba(108,99,255,.5)"></span>
+        <span style="width:11px;height:11px;border-radius:2px;background:rgba(108,99,255,.75)"></span>
+        <span style="width:11px;height:11px;border-radius:2px;background:rgba(108,99,255,1)"></span>
+      </span>
+      <span>More</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════ -->
+<section id="contact">
+  <span class="section-tag">Get In Touch</span>
+  <h2 class="section-title">Contact <span>Me</span></h2>
+
+  <div class="contact-grid">
+    <a href="mailto:jimishpately50@gmail.com" class="glass-card contact-card reveal" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="contact-icon" style="background:rgba(234,67,53,.15)">📧</div>
+      <div><div class="contact-label">Email</div><div class="contact-value">jimishpately50@gmail.com</div></div>
+    </a>
+    <a href="https://linkedin.com/in/jimish-patel" target="_blank" class="glass-card contact-card reveal" style="transition-delay:.1s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="contact-icon" style="background:rgba(10,102,194,.18)">💼</div>
+      <div><div class="contact-label">LinkedIn</div><div class="contact-value">jimish-patel</div></div>
+    </a>
+    <a href="https://github.com/jimish6600" target="_blank" class="glass-card contact-card reveal" style="transition-delay:.2s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="contact-icon" style="background:rgba(255,255,255,.07)">🐙</div>
+      <div><div class="contact-label">GitHub</div><div class="contact-value">jimish6600</div></div>
+    </a>
+    <a href="tel:+919328087181" class="glass-card contact-card reveal" style="transition-delay:.3s" data-tilt>
+      <div class="tilt-shine"></div>
+      <div class="contact-icon" style="background:rgba(34,197,94,.15)">📱</div>
+      <div><div class="contact-label">Phone</div><div class="contact-value">+91 93280 87181</div></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>Designed &amp; Built by <strong>Jimish Patel</strong> · SDE-1 @ Shipturtle · B.Tech CSE, Ahmedabad University</p>
+  <p style="margin-top:.35rem;font-size:.72rem">© 2025 · Made with ⚡ and a lot of coffee</p>
+</footer>
+
+<!-- ════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/bg.js"></script>
+<script src="js/api.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/render.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

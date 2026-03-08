@@ -1,0 +1,110 @@
+const CONFIG = {
+  user: {
+    name: 'Jimish Patel',
+    role: 'Software Engineer',
+    tagline: 'Backend · Full-Stack · Competitive Coder',
+    email: 'jimishpately50@gmail.com',
+    phone: '+91 93280 87181',
+    location: 'Ahmedabad, India',
+    summary: 'Aspiring software engineer with strong programming and problem-solving skills. Currently SDE-1 at Shipturtle, building scalable products.',
+  },
+  handles: {
+    leetcode:   'jimish6600',
+    codeforces: 'Jimishp6600',
+    codechef:   'jimish6600',
+    github:     'jimish6600',
+  },
+  urls: {
+    leetcode:   'https://leetcode.com/u/jimish6600/',
+    codeforces: 'https://codeforces.com/profile/Jimishp6600',
+    codechef:   'https://www.codechef.com/users/jimish6600',
+    github:     'https://github.com/jimish6600',
+    linkedin:   'https://linkedin.com/in/jimish-patel',
+  },
+  // Fallback static data used if API calls fail
+  fallback: {
+    leetcode: {
+      rating: 1927,
+      rank: 'Knight',
+      totalSolved: 400,
+      easySolved: 120,
+      mediumSolved: 220,
+      hardSolved: 60,
+      totalEasy: 800,
+      totalMedium: 1700,
+      totalHard: 700,
+    },
+    codeforces: {
+      rating: 1648,
+      maxRating: 1648,
+      rank: 'Expert',
+      maxRank: 'Expert',
+      ratingHistory: [],
+    },
+    codechef: {
+      rating: 1648,
+      stars: 3,
+      globalRank: null,
+      countryRank: null,
+    },
+    github: {
+      public_repos: 15,
+      followers: 10,
+      following: 20,
+    }
+  },
+  skills: {
+    languages:  ['C++','JavaScript','Python','HTML','CSS','SQL'],
+    frameworks: ['React.js','Next.js','Node.js','Express.js','Tailwind CSS','Bootstrap'],
+    tools:      ['MongoDB','MySQL','Redis','Git','Docker','RabbitMQ','Nginx','SCSS'],
+  },
+  experience: [
+    {
+      role: 'SDE 1',
+      company: 'Shipturtle',
+      location: 'Ahmedabad, Gujarat',
+      type: 'Onsite',
+      period: 'Dec 2025 – Present',
+      current: true,
+      points: [
+        'Conducted user tests on websites and apps to identify usability issues.',
+        'Applied UX expertise to improve product usability and user enjoyment.',
+        'Consistently maintained an average satisfaction rating of 4 stars.',
+      ],
+    },
+    {
+      role: 'Backend Developer Intern',
+      company: 'Rablo.in',
+      location: 'Lucknow, Uttar Pradesh',
+      type: 'Remote',
+      period: 'Jul 2024 – Oct 2024',
+      current: false,
+      points: [
+        'Built backend features using Node.js, Express.js, and MongoDB.',
+        'Collaborated on team projects, building scalable REST APIs.',
+      ],
+    },
+  ],
+  projects: [
+    {
+      title: 'Microservices E-Commerce',
+      subtitle: 'Scalable Backend Architecture',
+      emoji: '🛒',
+      color: '#6c63ff',
+      desc: 'Production-grade e-commerce backend with microservices using RabbitMQ for async messaging, Docker for containerisation, and Nginx as reverse proxy across user, product, and shopping services.',
+      tech: ['Node.js','MongoDB','RabbitMQ','Docker','Nginx','Express.js'],
+      github: 'https://github.com/jimish6600',
+      live: null,
+    },
+    {
+      title: 'QuizGenius',
+      subtitle: 'AI-Powered Quiz Platform',
+      emoji: '🧠',
+      color: '#00d4ff',
+      desc: 'Full-stack app that auto-generates quizzes from uploaded PDFs using AI, with instant feedback, JWT authentication, Redis caching for performance, and multiple attempt tracking.',
+      tech: ['React','Node.js','MongoDB','Redis','JWT','Tailwind CSS','Express.js'],
+      github: 'https://github.com/jimish6600',
+      live: '#',
+    },
+  ],
+};
