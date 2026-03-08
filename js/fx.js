@@ -3,32 +3,19 @@ const FX = (() => {
 
   /* Custom cursor ----------------------------------------- */
   function initCursor() {
-    const dot   = document.getElementById('cursor-dot');
-    const ring  = document.getElementById('cursor-ring');
+    const dot  = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
     if (!dot || !ring) return;
 
-    let rx = 0, ry = 0;
-    document.addEventListener('mousemove', e => {
-      dot.style.transform  = `translate(${e.clientX}px,${e.clientY}px)`;
-      rx += (e.clientX - rx) * 0.1;
-      ry += (e.clientY - ry) * 0.1;
-    });
-
-    // Smooth ring follow
-    function loop() {
-      ring.style.transform = `translate(${rx}px,${ry}px)`;
-      rx += (parseFloat(dot.style.transform.split('(')[1]) - rx) * 0.12;
-      ry += (parseFloat(dot.style.transform.split(',')[1]) - ry) * 0.12;
-      requestAnimationFrame(loop);
-    }
-    // Simpler approach
     let tx = 0, ty = 0, cx = 0, cy = 0;
+
     document.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
+
     (function trackRing() {
-      cx += (tx - cx) * 0.1;
-      cy += (ty - cy) * 0.1;
-      ring.style.transform = `translate(${cx - 14}px,${cy - 14}px)`;
+      cx += (tx - cx) * 0.12;
+      cy += (ty - cy) * 0.12;
       dot.style.transform  = `translate(${tx - 4}px,${ty - 4}px)`;
+      ring.style.transform = `translate(${cx - 14}px,${cy - 14}px)`;
       requestAnimationFrame(trackRing);
     })();
 

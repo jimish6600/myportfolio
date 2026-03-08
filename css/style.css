@@ -442,10 +442,11 @@ h1.hero-name {
 .heatmap-cell:hover { transform:scale(1.5); z-index:1; }
 
 /* ── CONTACT ─────────────────────────────────────────────── */
-.contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1rem; }
+.contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
 .contact-card {
   display:flex; align-items:center; gap:1rem;
   padding:1.25rem 1.5rem; text-decoration:none; color:var(--text);
+  overflow:hidden;
 }
 .contact-icon {
   width:46px; height:46px; border-radius:13px;
@@ -453,7 +454,10 @@ h1.hero-name {
   font-size:1.25rem; flex-shrink:0;
 }
 .contact-label { font-size:.7rem; color:var(--muted); }
-.contact-value { font-size:.88rem; font-weight:600; margin-top:.15rem; }
+.contact-value {
+  font-size:.88rem; font-weight:600; margin-top:.15rem;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
 
 /* ── FOOTER ──────────────────────────────────────────────── */
 footer {
